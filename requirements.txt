@@ -7,4 +7,3 @@ requests==2.11.1
 requests-oauthlib==0.6.2
 six==1.10.0
 wheel==0.26.0
-python-social-auth==0.2.21
