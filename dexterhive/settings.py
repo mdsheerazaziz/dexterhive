@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'dexterhive.core',
+    'dexterhive.groups',
     'social.apps.django_app.default',
 ]
 

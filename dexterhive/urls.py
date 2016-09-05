@@ -15,10 +15,10 @@ Including another URLconf
 """
 from django.conf.urls import url, include
 from django.contrib import admin
-from dexterhive.core import views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'', include('social.apps.django_app.urls', namespace='social')),
-    url(r'^$', views.home),
+    url(r'', include('dexterhive.core.urls')),
+    url(r'', include('dexterhive.groups.urls'))
 ]

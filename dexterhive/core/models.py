@@ -25,5 +25,3 @@ class Invites(ModelBase):
     pass
 
 
-class Groups(ModelBase):
-    pass

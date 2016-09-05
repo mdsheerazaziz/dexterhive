@@ -4,5 +4,9 @@ from django.shortcuts import render
 
 def home(request):
     if request.user.is_authenticated():
-        return HttpResponseRedirect('/home')
+        return HttpResponseRedirect('/dashboard')
     return render(request, 'index.html')
+
+
+def dash_board(request):
+    return render(request, 'dashboard.html')
