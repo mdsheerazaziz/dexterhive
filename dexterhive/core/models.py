@@ -21,9 +21,7 @@ class UserProfile(ModelBase):
     avatar = models.URLField(null=True)
 
 
-class Invites(ModelBase):
+class Invitees(ModelBase):
     pass
 
 
-class Groups(ModelBase):
-    pass
