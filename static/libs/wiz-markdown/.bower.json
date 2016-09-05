@@ -1,0 +1,12 @@
+{
+  "name": "wiz-markdown",
+  "homepage": "https://github.com/GrumpyWizards/wizMarkdown",
+  "_release": "391ca8734e",
+  "_resolution": {
+    "type": "commit",
+    "commit": "391ca8734e"
+  },
+  "_source": "git://github.com/GrumpyWizards/wizMarkdown.git",
+  "_target": "391ca8734e",
+  "_originalSource": "wiz-markdown"
+}
