@@ -1,0 +1,405 @@
+/*
+  Author: Anshu Singh
+  TODO: Use scss , too much of repetition of code.
+*/
+
+/* body style */
+.outermost-container {
+    background-color: #e9ebee;
+    font-family: Ubuntu, sans-serif;
+}
+
+/* left panel styling */
+.left-navbar {
+    position: fixed;
+    background-color: #f8f8f8;
+    width: 60px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    box-shadow: rgba(0, 0, 0, 0.117647) 0px 1px 6px, rgba(0, 0, 0, 0.117647) 0px 1px 4px;
+}
+
+.nav-container {
+    display: block;
+    text-align: center;
+}
+
+.logo-div {
+    margin-top: 20%;
+    margin-bottom: 114%;
+    cursor: pointer;
+}
+
+.left-navbar ul {
+    padding: 0;
+    list-style: none;
+    cursor: pointer;
+}
+
+/* home navigator */
+.home-nav  {
+    background-color: #0288D1;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.home-nav:before {
+    position: absolute;
+    content: '';
+    border-style: solid;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    top: calc(50% - 10px);
+    right: 1px;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent #0288D1;
+}
+
+.home-nav:hover:before {
+    -webkit-transform: translateX(10px);
+    transform: translateX(10px);
+}
+
+/* groups navigator*/
+.groups-nav {
+    background-color: #00C853;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.groups-nav:before {
+    position: absolute;
+    content: '';
+    border-style: solid;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    top: calc(50% - 10px);
+    right: 1px;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent #00C853;
+}
+
+.groups-nav:hover:before {
+    -webkit-transform: translateX(10px);
+    transform: translateX(10px);
+}
+
+/* bookmark navigator*/
+.bookmark-nav {
+    background-color: #FFAB00;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.bookmark-nav:before {
+    position: absolute;
+    content: '';
+    border-style: solid;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    top: calc(50% - 10px);
+    right: 1px;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent #FFAB00;
+}
+
+.bookmark-nav:hover:before {
+    -webkit-transform: translateX(10px);
+    transform: translateX(10px);
+}
+
+/* archive navigator*/
+.archive-nav {
+    background-color: #ff1744;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.archive-nav:before {
+    position: absolute;
+    content: '';
+    border-style: solid;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    top: calc(50% - 10px);
+    right: 1px;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent #ff1744;
+}
+
+.archive-nav:hover:before {
+    -webkit-transform: translateX(10px);
+    transform: translateX(10px);
+}
+
+/* calendar navigator*/
+.calendar-nav {
+    background-color: #673AB7;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.calendar-nav:before {
+    position: absolute;
+    content: '';
+    border-style: solid;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    top: calc(50% - 10px);
+    right: 1px;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent #673AB7;
+}
+
+.calendar-nav:hover:before {
+    -webkit-transform: translateX(10px);
+    transform: translateX(10px);
+}
+
+/* user navigator*/
+.user-nav {
+    background-color: #e53935;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.user-nav:before {
+    position: absolute;
+    content: '';
+    border-style: solid;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    top: calc(50% - 10px);
+    right: 1px;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent #e53935;
+}
+
+.user-nav:hover:before {
+    -webkit-transform: translateX(10px);
+    transform: translateX(10px);
+}
+
+/* font awesome styling*/
+.fa {
+    font-size: 1.8em;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.nav-buttons:hover .fa {
+    font-size: 2em;
+    color: #e5e5e5;
+}
+
+
+/* Profile settings */
+.profile-info-div {
+    border-top: 1px solid #e1e1e1;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 4px;
+    cursor: pointer;
+}
+
+.profile-picture {
+    border-radius: 30px;
+    height: 40px;
+    width: 40px;
+}
+
+/* Left section*/
+.content-container {
+    margin-left: 60px;
+}
+
+/* header */
+.header {
+    top: 0;
+    width: 100vw;
+    position: fixed;
+    height: 50px;
+    background-color: #ffffff;
+    padding-top: 1%;
+    border-bottom: 1px solid #e5e5e5;
+    z-index: 3;
+    box-shadow: rgba(0, 0, 0, 0.117647) 0px 1px 6px, rgba(0, 0, 0, 0.117647) 0px 1px 4px;
+}
+
+.content-section {
+    display: inline-flex;
+    vertical-align: middle;
+    width: 92vw;
+    padding-bottom: 1%;
+}
+
+/* font awesome search icon*/
+.search-icon {
+    position: absolute;
+    left: 728px;
+    color: #1E88E5;
+    font-size: 1.2em;
+    bottom: -2px;
+    border: 1px solid;
+    padding: 8px;
+    background-color: #e5e5e5;
+}
+
+/* search input field */
+.search-bar {
+    width: 418px;
+    padding-left: 1%;
+    margin-left: 300px;
+    height: 33px;
+    outline: none;
+    font-family: Ubuntu, sans-serif;
+}
+
+.message-notification-div {
+    position: absolute;
+    left: 86%;
+    width: 15vw;
+}
+
+.fa-envelope {
+    padding-left: 10%;
+}
+
+.notify {
+    font-size: 1.5em;
+    color: #3f3f3f;
+}
+
+/* main content section */
+.content-div {
+    height : 100vh;
+    margin-top: 50px;
+}
+
+.left-panel {
+    margin: 3% 1% 1% 3%;
+}
+
+.status-update-wrapper {
+    border: 1px solid;
+    border-color: #e5e6e9 #dfe0e4 #d0d1d5;
+    border-radius: 3px;
+    background-color: #ffffff;
+    min-height: 130px;
+    display: block;
+    padding: 1.5%;
+}
+
+.status-update {
+    padding-top: 1%;
+    padding-bottom: 1%;
+    border-top: 1px solid #f1f1f1;
+    border-bottom: 1px solid #f1f1f1;
+}
+
+.status-profile-picture {
+    width: 50px;
+    height: 50px;
+}
+
+.status-update textarea {
+    border: none;
+    resize: none;
+    font-size: 1em;
+    width: 90%;
+    padding-left: 1%;
+    font-size: 0.9em;
+    min-height: 45px;
+    outline: none;
+    font-family: Ubuntu, sans-serif;
+}
+
+/*TODO More icons will be added in this section */
+.status-toolbar {
+    float: right;
+}
+
+/* overriding angular button css*/
+.md-button {
+    line-height: 27px;
+    min-height: 16px;
+    min-width: 59px;
+}
+
+.md-button.md-raised {
+    background-color: #0D47A1;
+    color: #ffffff;
+    font-size: 0.8em;
+    text-transform: capitalize;
+    font-weight: bold;
+}
+
+.work-panel {
+    margin-top: 2%;
+    border: 1px solid;
+    border-color: #e5e6e9 #dfe0e4 #d0d1d5;
+    border-radius: 3px;
+    background-color: #ffffff;
+    min-height: 485px;
+}
+
+.right-panel {
+    margin: 3% 3% 1% 1%;
+}
+
+.title {
+    font-size: 1.2em;
+    color: #1A237E;
+}
+
+.groups-panel {
+    border: 1px solid;
+    border-color: #e5e6e9 #dfe0e4 #d0d1d5;
+    border-radius: 3px;
+    background-color: #ffffff;
+    min-height: 270px;
+    margin-bottom: 4%;
+    padding: 7%;
+    display: block;
+}
+
+/* Rename this */
+.random-panel {
+    border: 1px solid;
+    border-color: #e5e6e9 #dfe0e4 #d0d1d5;
+    border-radius: 3px;
+    background-color: #ffffff;
+    min-height: 200px;
+    margin-bottom: 4%;
+    padding: 7%;
+}
