@@ -1,5 +1,6 @@
 from django.http.response import HttpResponseRedirect
 from django.shortcuts import render
+from dexterhive.core.resources import get_user_details
 
 
 def home(request):
@@ -9,5 +10,6 @@ def home(request):
 
 
 def dash_board(request):
-    return render(request, 'dashboard.html')
+    context = {'user_details': get_user_details(request.user)}
+    return render(request, 'dashboard.html', context)
 

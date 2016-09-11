@@ -1,29 +1,108 @@
+<!-- Author: Anshu Singh -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+
+    <!--  Angular Material libraries -->
+    <link rel="stylesheet"
+          href="/static/libs/angular-material/angular-material.min.css"/>
+    <link rel="stylesheet"
+          href="/static/libs/angular-material/angular-material.layouts.min.css"/>
+    <script src="/static/libs/angular/angular.js"></script>
+    <script src="/static/libs/angular-animate/angular-animate.js"></script>
+    <script src="/static/libs/angular-aria/angular-aria.js"></script>
+    <script src="/static/libs/angular-route/angular-route.js"></script>
+    <script
+            src='/static/libs/angular-sanitize/angular-sanitize.min.js'></script>
+    <script type="text/javascript"
+            src="/static/libs/angular-material/angular-material.min.js"></script>
+
+    <!-- Google Font awesome library -->
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+
+    <!-- Google Ubuntu Font -->
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=Latin">
+
+    <!-- Others -->
+    <link rel="stylesheet" href="/static/css/dashboard.css"/>
+    <script src="/static/js/index.js"></script>
+    <link rel='shortcut icon' href='/static/img/favicon.png' type='image/x-icon/'>
+
+    <title>DexterHive</title>
 </head>
-<body>
-    <a href="">Create a Group</a><br>
-    <form method="post" action="/create-group/">
-        {% csrf_token %}
-    Group Name<input type="text" name="group_name"><br>
-    About<textarea rows="4" cols="50" name="about"></textarea><br>
-    Group Type<input list="browsers" name="group_type">
-              <datalist id="browsers">
-                <option value="Internet Explorer">
-                <option value="Firefox">
-                <option value="Chrome">
-                <option value="Opera">
-                <option value="Safari">
-              </datalist><br>
-    The group is
-        <input type="radio" name="group_visibility" value="Public" checked> Public<br>
-        <input type="radio" name="group_visibility" value="Private"> Private<br>
-        <input type="radio" name="group_visibility" value="Hidden"> Hidden
-        <br>
-        <input type="submit" name="submit" value="submit">
-    </form>
+
+<body class="outermost-container">
+<div ng-app="DexterHiveApp">
+    <div class="left-navbar">
+        <div class="nav-container">
+            <div class="logo-div">
+                <img src="/static/img/logo.png" height="45" width="28">
+            </div>
+            <ul>
+                <li class="nav-buttons home-nav">
+                    <i class="fa fa-home " aria-hidden="true"></i>
+                </li>
+                <li class="nav-buttons user-nav">
+                    <i class="fa fa-user" aria-hidden="true"></i>
+                </li>
+                <li class="nav-buttons groups-nav">
+                    <i class="fa fa-group" aria-hidden="true"></i>
+                </li>
+                <li class="nav-buttons bookmark-nav">
+                    <i class="fa fa-bookmark" aria-hidden="true"></i>
+                </li>
+                <li class="nav-buttons archive-nav">
+                    <i class="fa fa-archive" aria-hidden="true"></i>
+                </li>
+                <li class="nav-buttons calendar-nav">
+                    <i class="fa fa-calendar" aria-hidden="true"></i>
+                </li>
+            </ul>
+            <div class="profile-info-div">
+                <img class="profile-picture" src="{{user_details.user_profile}}" >
+            </div>
+        </div>
+    </div>
+    <div class="content-container">
+        <Header class="header">
+            <section class="content-section">
+                <div class="search-panel">
+                    <i class="fa fa-search search-icon"></i>
+                    <input class="search-bar" type="text" placeholder="Search for authors, research groups and publications"></div>
+                <div class="message-notification-div">
+                    <i class="fa fa-bell-o notify" aria-hidden="true"></i>
+                    <i class="fa fa-envelope notify" aria-hidden="true"></i>
+                </div>
+            </section>
+        </Header>
+        <div class="content-div" layout="row" flex="100">
+            <div class="left-panel" layout="column" flex="70">
+                <div class="status-update-wrapper" layout="row" >
+                    <div class="status-update">
+                        <img class="status-profile-picture" src="{{user_details.user_profile}}" >
+                        <textarea placeholder="What's in your mind? Share your thought."></textarea>
+                    </div>
+                    <div class="status-toolbar">
+                        <md-button class="md-raised share-button">Share</md-button>
+                    </div>
+                </div>
+                <div class="work-panel" layout="row" ></div>
+            </div>
+            <div class="right-panel" layout="column" flex="30">
+                <div layout="row" class="groups-panel">
+                    <span class="title">Groups</span>
+                </div>
+                <div layout="row" class="random-panel">
+                    <span class="title">Random</span>
+                </div>
+                <div layout="row" class="random-panel">
+                    <span class="title">Random</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 </body>
 </html>
