@@ -8,16 +8,13 @@ RUN apt-get update -y && apt-get install -y nginx \
     python-pip \
     libffi-dev \
     libssl-dev \
-    libpq-dev \
     libmysqlclient-dev \
-    liblua5.2-dev \
-    lua5.2 \
     && \
     pip install -U pip && \
     rm /bin/sh && \
     ln -s /bin/bash /bin/sh
 
-ENV WORKDIR /opt/workspace/trackme/
+ENV WORKDIR /opt/workspace/dexterhive/
 
 COPY requirements.txt $WORKDIR
 
