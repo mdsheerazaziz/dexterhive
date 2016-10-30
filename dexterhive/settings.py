@@ -111,7 +111,7 @@ STATICFILES_DIRS = (
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
-STATIC_ROOT = os.path.join(BASE_DIR, "..", "static", "dexterhive")
+STATIC_ROOT = os.path.join(BASE_DIR, "static", "dexterhive")
 STATIC_URL = '/static/'
 WSGI_APPLICATION = 'dexterhive.wsgi.application'
 
