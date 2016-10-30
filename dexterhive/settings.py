@@ -41,8 +41,8 @@ INSTALLED_APPS = [
     'social.apps.django_app.default',
 ]
 
-SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = '978185654601-ivujp398qkldspkshnj0n9o3d0l8dp9f.apps.googleusercontent.com'
-SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = 'wjmlaL0hoGW3HqAjJnuvUils'
+SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = '750022339334-l1bqotg623ip0hqgcaa7eog27v1o1me3.apps.googleusercontent.com'
+SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = 'dtDkw42kEvUCrJaDI2ig_z9f'
 
 SOCIAL_AUTH_ENABLED_BACKENDS = ('google')
 LOGIN_REDIRECT_URL = '/'
