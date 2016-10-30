@@ -27,7 +27,6 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-
 # Application definition
 
 INSTALLED_APPS = [
@@ -48,8 +47,8 @@ SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = 'wjmlaL0hoGW3HqAjJnuvUils'
 SOCIAL_AUTH_ENABLED_BACKENDS = ('google')
 LOGIN_REDIRECT_URL = '/'
 AUTHENTICATION_BACKENDS = (
-  'social.backends.google.GoogleOAuth2',
-  'django.contrib.auth.backends.ModelBackend',
+    'social.backends.google.GoogleOAuth2',
+    'django.contrib.auth.backends.ModelBackend',
 )
 
 SOCIAL_AUTH_GOOGLE_OAUTH2_IGNORE_DEFAULT_SCOPE = True
@@ -102,12 +101,12 @@ TEMPLATES = [
 
 STATIC_DIR = os.path.join(BASE_DIR, "static")
 STATICFILES_FINDERS = (
-  'django.contrib.staticfiles.finders.FileSystemFinder',
-  'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+    'django.contrib.staticfiles.finders.FileSystemFinder',
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
 )
 
 STATICFILES_DIRS = (
-  STATIC_DIR,
+    STATIC_DIR,
 )
 
 # Static files (CSS, JavaScript, Images)
@@ -117,17 +116,19 @@ STATIC_ROOT = os.path.join(PROJECT_DIR, 'dexterhive', 'static')
 
 WSGI_APPLICATION = 'dexterhive.wsgi.application'
 
-
 # Database
 # https://docs.djangoproject.com/en/1.10/ref/settings/#databases
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'dexterhive',
+        'USER': 'dexterhive',
+        'PASSWORD': 'dexterhive1234',
+        'HOST': 'localhost',
+        'PORT': '5432',
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/1.10/ref/settings/#auth-password-validators
@@ -147,7 +148,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
 # Internationalization
 # https://docs.djangoproject.com/en/1.10/topics/i18n/
 
@@ -160,7 +160,6 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
-
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
