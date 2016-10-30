@@ -8,7 +8,6 @@ RUN apt-get update -y && apt-get install -y nginx \
     python-pip \
     libffi-dev \
     libssl-dev \
-    libpq-dev \
     libmysqlclient-dev \
     && \
     pip install -U pip && \
