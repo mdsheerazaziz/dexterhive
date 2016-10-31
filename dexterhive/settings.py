@@ -39,7 +39,6 @@ INSTALLED_APPS = [
     'dexterhive.core',
     'dexterhive.groups',
     'social.apps.django_app.default',
-    'dexterhive.images'
 ]
 
 SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = '750022339334-l1bqotg623ip0hqgcaa7eog27v1o1me3.apps.googleusercontent.com'
