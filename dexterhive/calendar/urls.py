@@ -1,5 +1,5 @@
 from django.conf.urls import url
-from dexterhive.calendars import views
+from dexterhive.calendar import views
 
 urlpatterns = [
     url(r'^authorize-google-calendar/', views.get_authorization_url),
