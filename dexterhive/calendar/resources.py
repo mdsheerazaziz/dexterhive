@@ -1,7 +1,7 @@
 import httplib2
 from apiclient import discovery
 from dexterhive.calendar.constants import GOOGLE_CALENDAR_SERVICE_NAME, GOOGLE_CALENDAR_SERVICE_VERSION3, \
-    GOOGLE_CALENDAR_ID, GOOGLE_CALENDAR_ACCESS_TOKEN_WIDGET_NAME
+    GOOGLE_CALENDAR_ID
 from dexterhive.calendar.utils import format_timestamp
 from oauth2client.client import Credentials
 from dexterhive.calendar.settings import GOOGLE_CALENDAR_OAUTH2_FLOW
@@ -15,7 +15,7 @@ def _fetch_credentials(code):
 
 
 def _get_user_credentials(user):
-    credentials = UserAccessTokens.objects.filter(user=user, widget_type=GOOGLE_CALENDAR_ACCESS_TOKEN_WIDGET_NAME)
+    credentials = UserAccessTokens.objects.filter(user=user, widget_type='Google_Calendar')
     return map((lambda credential: Credentials.new_from_json(credential.credential_details)), credentials)
 
 
@@ -55,8 +55,7 @@ def _save_calendar_event(user, raw_event_json):
 
 def save_user_credentials(user, authorization_code):
     credentials = _fetch_credentials(authorization_code)
-    UserAccessTokens(user=user, widget_type=GOOGLE_CALENDAR_ACCESS_TOKEN_WIDGET_NAME,
-                     credential_details=credentials.to_json()).save()
+    UserAccessTokens(user=user, widget_type='Google_Calendar', credential_details=credentials.to_json()).save()
 
 
 def sync_user_google_calendar(user):
