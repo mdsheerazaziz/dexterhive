@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'dexterhive.core',
     'dexterhive.groups',
-    'dexterhive.calendar',
+    'dexterhive.calendars',
     'social.apps.django_app.default',
 ]
 
