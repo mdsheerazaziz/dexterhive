@@ -1,9 +1,0 @@
-GOOGLE_CALENDAR_CLIENT_ID = '750022339334-lpfmh3gmskitkl281laq1mdkahh4h905.apps.googleusercontent.com'
-GOOGLE_CALENDAR_CLIENT_SECRET = 'aEEJM6yOZJF_or7jwYr8WaGP'
-GOOGLE_CALENDAR_SCOPE = ['https://www.googleapis.com/auth/calendar.readonly']
-GOOGLE_CALENDAR_REDIRECT_URI = 'http://dexterhive.com/save-google-calendar-credentials/'
-GOOGLE_CALENDAR_ACCESS_TYPE = 'offline'
-GOOGLE_CALENDAR_PROMPT = 'consent'
-GOOGLE_CALENDAR_ID = 'primary'
-GOOGLE_CALENDAR_SERVICE_NAME = 'calendar'
-GOOGLE_CALENDAR_SERVICE_VERSION3 = 'v3'
