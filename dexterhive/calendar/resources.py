@@ -1,12 +1,12 @@
 import httplib2
 from apiclient import discovery
-from dexterhive.calendars.constants import GOOGLE_CALENDAR_SERVICE_NAME, GOOGLE_CALENDAR_SERVICE_VERSION3, \
+from dexterhive.calendar.constants import GOOGLE_CALENDAR_SERVICE_NAME, GOOGLE_CALENDAR_SERVICE_VERSION3, \
     GOOGLE_CALENDAR_ID, GOOGLE_CALENDAR_ACCESS_TOKEN_WIDGET_NAME
-from dexterhive.calendars.utils import format_timestamp
+from dexterhive.calendar.utils import format_timestamp
 from oauth2client.client import Credentials
-from dexterhive.calendars.settings import GOOGLE_CALENDAR_OAUTH2_FLOW
+from dexterhive.calendar.settings import GOOGLE_CALENDAR_OAUTH2_FLOW
 from dexterhive.core.models import UserAccessTokens
-from dexterhive.calendars.models import CalendarEvents
+from dexterhive.calendar.models import CalendarEvents
 
 
 def _fetch_credentials(code):

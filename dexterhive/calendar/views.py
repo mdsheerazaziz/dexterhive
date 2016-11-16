@@ -1,6 +1,6 @@
-from dexterhive.calendars.resources import save_user_credentials
+from dexterhive.calendar.resources import save_user_credentials
 from django.http.response import HttpResponseRedirect, HttpResponse
-from dexterhive.calendars.settings import GOOGLE_CALENDAR_OAUTH2_FLOW
+from dexterhive.calendar.settings import GOOGLE_CALENDAR_OAUTH2_FLOW
 
 
 def get_authorization_url(request):
