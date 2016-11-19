@@ -10,8 +10,8 @@ class Groups(ModelBase):
         Store the group related information
     """
     uuid = models.UUIDField(default=uuid.uuid4)
-    avatar = models.URLField(null=True)
-    parent = models.ForeignKey('self', null=True)
+    avatar = models.URLField(null=True, blank=True)
+    parent = models.ForeignKey('self', null=True, blank=True)
     name = models.CharField(max_length=127, default="")
     description = models.TextField(null=True)
     type = models.CharField(max_length=63, default="")
