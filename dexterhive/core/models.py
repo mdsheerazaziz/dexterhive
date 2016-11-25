@@ -32,5 +32,17 @@ class UserAccessTokens(models.Model):
     credential_details = JSONField()
 
 
+class ThirdPartyIntegrations(models.Model):
+    name = models.CharField(max_length=63)
+    other_details = JSONField(null=True)
+
+
+class UserThirdPartyIntegrationMapping(models.Model):
+    user = models.ForeignKey(User)
+    integration = models.ForeignKey(ThirdPartyIntegrations)
+    integration_user_id = models.CharField(max_length=511)
+    integration_password = models.CharField(max_length=31, null=True)
+
+
 class Invitees(ModelBase):
     pass
