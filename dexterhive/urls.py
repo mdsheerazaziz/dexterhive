@@ -20,6 +20,5 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'', include('social.apps.django_app.urls', namespace='social')),
     url(r'', include('dexterhive.core.urls')),
-    url(r'', include('dexterhive.groups.urls')),
-    url(r'', include('dexterhive.calendars.urls'))
+    url(r'', include('dexterhive.groups.urls'))
 ]

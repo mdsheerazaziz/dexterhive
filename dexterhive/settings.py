@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'dexterhive.groups',
     'dexterhive.calendars',
     'dexterhive.task_management',
+    'dexterhive.sharelatex',
     'social.apps.django_app.default',
     'related_admin'
 ]
@@ -166,4 +167,3 @@ USE_TZ = True
 
 is_latex_enabled = True
 latex_url = "http://192.168.1.4"
-

@@ -10,7 +10,6 @@ class ModelBase(models.Model):
     """
         Store base attributes
     """
-    # TODO change this to abstract
     created_at = models.DateTimeField(default=timezone.now)
     last_updated_at = models.DateTimeField(auto_now=True)
 
