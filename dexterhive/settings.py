@@ -38,7 +38,11 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'dexterhive.core',
     'dexterhive.groups',
+    'dexterhive.calendars',
+    'dexterhive.task_management',
+    'dexterhive.sharelatex',
     'social.apps.django_app.default',
+    'related_admin'
 ]
 
 SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = '750022339334-l1bqotg623ip0hqgcaa7eog27v1o1me3.apps.googleusercontent.com'
@@ -68,7 +72,8 @@ SOCIAL_AUTH_PIPELINE = (
     'social.pipeline.social_auth.associate_user',
     'social.pipeline.social_auth.load_extra_data',
     'social.pipeline.user.user_details',
-    'dexterhive.core.pipeline.get_avatar'
+    'dexterhive.core.pipeline.get_avatar',
+    'dexterhive.core.pipeline.configure_latex'
 )
 
 MIDDLEWARE = [
@@ -159,3 +164,6 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
+
+is_latex_enabled = True
+latex_url = "http://192.168.1.4"
